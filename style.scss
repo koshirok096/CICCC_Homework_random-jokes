@@ -1,0 +1,142 @@
+$primary-color: #2862b8;
+$secondary-color: #a6c7d8;
+$padding: 20px;
+$border-radius: 4px;
+$font-size: 16px;
+$button-padding: 4px 8px;
+
+body{
+    padding: 0;
+}
+
+header{
+    background-color: $primary-color;
+    color: $secondary-color;
+    padding: $padding;
+    text-align: center;
+    font-size: $font-size;
+    font-weight: bold;
+    border-radius: $border-radius;
+    margin-bottom: $padding;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // .logo{
+    //     font-size: 24px;
+    // }
+    // .nav{
+    //     display: flex;
+    //     justify-content: space-between;
+    //     align-items: center;
+    //     width: 200px;
+    //     a{
+    //         text-decoration: none;
+    //         color: $secondary-color;
+    //         &:hover{
+    //             color: white;
+    //         }
+    //     }
+    // }
+}
+
+.language{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100px;
+    button{
+        text-decoration: none;
+        color: $primary-color;
+        &:hover{
+            color: white;
+        }
+    }
+}
+
+
+@mixin card-style {
+  background-color: white;
+  padding: $padding;
+  border-radius: $border-radius;
+  box-shadow: 1px 1px 5px #ccc;
+}
+
+@mixin button-style {
+    font-size: $font-size;
+    font-weight: bold;
+    padding: $button-padding;
+    border: none;
+    border-radius: $border-radius;
+    background-color: $primary-color;
+    color: $secondary-color;
+    cursor: pointer;
+    &:hover {
+    //   background-color: $secondary-color;
+    }
+
+}
+
+.news-card {
+  @include card-style;
+  margin-bottom: $padding;
+  .news-title {
+    font-size: $font-size;
+    margin-bottom: $padding;
+  }
+  .news-description {
+    font-size: 14px;
+    margin-bottom: $padding;
+  }
+  .news-link {
+    @include button-style;
+    font-size: $font-size;
+    // color: white;
+    color: $secondary-color;
+    text-decoration: none;
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+// my code
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: auto;
+    text-align: center;
+    img{
+      width: 280px;
+      height: 280px;
+      border-radius: 160px;
+      margin-bottom: 2rem;
+      object-fit: cover;
+    }
+    h2{
+      font-weight:normal;
+      font-size: 1.6rem;
+    }
+    h1{
+      padding-bottom: 1.2rem;
+      font-size: 3.2rem;
+      max-width: 75%;
+    }
+    button{
+      font-size: 1.5rem;
+    }
+    #ref-container{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 1.2rem;
+      h3, p{
+        margin-bottom: 0.6rem;
+      }
+    }
+}
